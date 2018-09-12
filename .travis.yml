@@ -1,13 +1,5 @@
 matrix:
-  include:
-    - language: android
-      jobs:
-        include:
-          - script: android/script.sh script_test
-          - script: android/script.sh script_build  
-
-    - language: node_js
-      jobs:
-        include:
-          - script: web/script.sh script_test
-          - script: web/script.sh script_build
+  jobs:
+    include:
+      - script: web/script.sh script_test
+      - script: web/script.sh script_build
