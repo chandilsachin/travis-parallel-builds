@@ -2,7 +2,4 @@ jobs:
   include:
     - stage: test
       script: echo "script1"
-    - # stage name not required, will continue to use `test`
       script: echo "script2"
-    - stage: deploy
-      script: echo "script3"
