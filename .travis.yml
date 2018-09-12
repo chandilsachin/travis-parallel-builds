@@ -3,15 +3,13 @@ matrix:
     - language: android
       install:
         - android/script.sh install
-      jobs:
-        include:
-          - script: android/script.sh script_test
-          - script: android/script.sh script_build
+      script:
+        - android/script.sh script_test
+        - android/script.sh script_build
 
     - language: node_js
       install:
         - web/script.sh install
-      jobs:
-        include:
-          - script: web/script.sh script_test
-          - script: web/script.sh script_build
+      script:
+        - web/script.sh script_test
+        - web/script.sh script_build
