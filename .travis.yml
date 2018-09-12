@@ -1,6 +1,5 @@
 jobs:
   include:
     - stage: test
-      script: echo "script1"
-    - # stage name not required, will continue to use `test`
-      script: echo "script2"
+      - script: echo "script1"
+      - script: echo "script2"
