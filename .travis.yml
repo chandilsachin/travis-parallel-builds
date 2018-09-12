@@ -5,7 +5,6 @@ matrix:
         include:
         - stage: "test"
           script: android/script.sh script_test
-        - stage: "build"
           script: android/script.sh script_build  
       install:
         - android/script.sh install
@@ -17,5 +16,4 @@ matrix:
         include:
         - stage: "test"
           script: web/script.sh script_test
-        - stage: "build"
           script: web/script.sh script_build
