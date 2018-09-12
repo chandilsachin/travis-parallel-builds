@@ -1,0 +1,12 @@
+matrix:
+  include:
+    - language: android
+      install:
+        - android/script.sh install
+      script:
+        - android/script.sh script
+    - language: node-js
+      install:
+        - web/script.sh install
+      script:
+        - web/script.sh script
