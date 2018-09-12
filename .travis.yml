@@ -1,5 +1,4 @@
-matrix:
-  jobs:
+jobs:
     include:
       - stage: test
         script: web/script.sh script_test
