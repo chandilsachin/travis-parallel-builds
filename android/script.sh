@@ -42,3 +42,5 @@ function after_deploy {
 }
 
 $1 "$@"
+
+exit
