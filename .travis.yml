@@ -13,3 +13,7 @@ matrix:
       script:
         - web/script.sh script_test
         - web/script.sh script_build
+      jobs:
+        include:
+          - script: web/script.sh script_test
+          - script: web/script.sh script_build
