@@ -2,4 +2,4 @@ matrix:
   include:
     - language: node_js
       script:
-        - web/script.sh script
+        - web/script.sh script_build
