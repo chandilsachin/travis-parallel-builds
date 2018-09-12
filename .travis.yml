@@ -3,3 +3,5 @@ jobs:
     - stage: test
       script: echo "script1"
       script: echo "script2"
+    - stage: deploy
+      script: echo "script3"
