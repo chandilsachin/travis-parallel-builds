@@ -3,9 +3,8 @@ matrix:
     - language: android
       jobs:
         include:
-        - stage: "test"
-          script: android/script.sh script_test
-          script: android/script.sh script_build  
+          - script: android/script.sh script_test
+          - script: android/script.sh script_build  
       install:
         - android/script.sh install
 
@@ -14,6 +13,5 @@ matrix:
         - web/script.sh install
       jobs:
         include:
-        - stage: "test"
-          script: web/script.sh script_test
-          script: web/script.sh script_build
+          - script: web/script.sh script_test
+          - script: web/script.sh script_build
