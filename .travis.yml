@@ -2,10 +2,10 @@ matrix:
   include:
     - language: android
       script:
-        jobs:
-          include:
-            - script: android/script.sh script_test
-            - script: android/script.sh script_build  
+        - jobs:
+            include:
+              - script: android/script.sh script_test
+              - script: android/script.sh script_build  
       install:
         - android/script.sh install
 
@@ -13,7 +13,7 @@ matrix:
       install:
         - web/script.sh install
       script:
-        jobs:
-          include:
-            - script: web/script.sh script_test
-            - script: web/script.sh script_build
+        - jobs:
+            include:
+              - script: web/script.sh script_test
+              - script: web/script.sh script_build
