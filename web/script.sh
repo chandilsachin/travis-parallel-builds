@@ -16,13 +16,13 @@ function before_script {
 }
 
 function script_test {
-    sleep 5s
+    #sleep 5s
     echo "All test cases passed successfully."
     return 0;
 }
 
 function script_build {
-    sleep 1m
+    #sleep 1m
     echo "Build finished."
     return 0;
 }
