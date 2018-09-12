@@ -1,5 +1,6 @@
 matrix:
   jobs:
     include:
-      - script: web/script.sh script_test
-      - script: web/script.sh script_build
+      - stage: test
+        script: web/script.sh script_test
+        script: web/script.sh script_build
