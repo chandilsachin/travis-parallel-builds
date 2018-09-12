@@ -1,5 +1,5 @@
 matrix:
   include:
-    - language: node_js
+    - language: android
       script:
         - echo "completed"
