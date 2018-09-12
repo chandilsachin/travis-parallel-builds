@@ -1,5 +1,19 @@
-jobs:
+matrix:
   include:
-    - stage: test
-      script: echo "script3"
-      script: echo "script4"
+    - language: android
+      script:
+        jobs:
+          include:
+            - script: android/script.sh script_test
+            - script: android/script.sh script_build  
+      install:
+        - android/script.sh install
+
+    - language: node_js
+      install:
+        - web/script.sh install
+      script:
+        jobs:
+          include:
+            - script: web/script.sh script_test
+            - script: web/script.sh script_build
