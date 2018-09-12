@@ -1,5 +1,7 @@
 matrix:
   include:
-    - language: android
+    - language: node_js
+      install:
+        - web/script.sh install
       script:
-        - echo "completed"
+        - web/script.sh script
