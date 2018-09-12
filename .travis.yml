@@ -1,12 +1,21 @@
 matrix:
   include:
     - language: android
+      jobs:
+        include:
+        - stage: "test"
+          script: android/script.sh script_test
+        - stage: "build"
+          script: android/script.sh script_build  
       install:
         - android/script.sh install
-      script:
-        - android/script.sh script_build
+
     - language: node_js
       install:
         - web/script.sh install
-      script:
-        - web/script.sh script_build
+      jobs:
+        include:
+        - stage: "test"
+          script: web/script.sh script_test
+        - stage: "build"
+          script: web/script.sh script_build
